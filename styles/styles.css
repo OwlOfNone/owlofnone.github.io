@@ -14,6 +14,7 @@ p {
 }
 
 h1 {
+    margin-left: 100px;
     text-align: center;
     color: #3F6146;
     font-weight: bolder;

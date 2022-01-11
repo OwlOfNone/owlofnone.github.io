@@ -1,5 +1,5 @@
 body {
-    background: #948D85;
+    background: #B6BFB8;
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -13,17 +13,37 @@ p {
   text-align: right;
 }
 
+.header-paragraph {
+  margin-left: 100px;
+  text-align: center;
+}
+
 h1 {
-    margin-left: 200px;
+    margin-top: 150px;
+    margin-left: 100px;
     text-align: center;
     color: #3F6146;
     font-weight: bolder;
     font-size: 28px;
     font-family: 'Josefin Sans', sans-serif;
 }
+
 img {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 30px;
     margin-right: 30px;
+}
+
+.logo-img {
+  text-align: center
+}
+
+
+.left-col {
+  background-color: #E0D1BF;
+}
+
+.right-col {
+  background-color: #948D85;
 }

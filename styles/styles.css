@@ -1,11 +1,7 @@
-body {
-    background: #B6BFB8;
-    font-family: 'Roboto Mono', monospace;
-}
-
 p {
   font-size: 14px;
   color: #3F6146;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .intro-paragraph {
@@ -40,14 +36,10 @@ img {
 }
 
 
-.left-col {
-  background-color: #E0D1BF;
+.upper-left-col {
+  background-color: #5e5b59;
 }
 
 .right-col {
   background-color: #948D85;
-}
-
-.first-row {
-  background-color: #5e5b59
 }

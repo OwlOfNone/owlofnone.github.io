@@ -31,6 +31,14 @@ img {
     margin-right: 30px;
 }
 
+.right
+
+{float: right; }
+
+.left
+
+{float: left; }
+
 .logo-img {
   text-align: center
 }

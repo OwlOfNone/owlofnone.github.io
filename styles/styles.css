@@ -1,13 +1,3 @@
-main{
-  margin-left: 0px;
-  margin-top: 0px;
-}
-
-body{
-  background-color: #a8a39f;
-  text-align: center;
-  vertical-align: middle;
-}
 
 p {
   font-size: 14px;
@@ -17,7 +7,7 @@ p {
 }
 
 ul {
-  font-size: 14px;
+  font-size: 12px;
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
@@ -27,7 +17,7 @@ h2 {
   text-align: center;
   color: #233627;
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 26px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -35,8 +25,14 @@ h3 {
   text-align: center;
   color: #233627;
   font-weight: bolder;
-  font-size: 28px;
+  font-size: 24px;
   font-family: 'Josefin Sans', sans-serif;
+}
+
+img{
+  vertical-align: middle;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 #divCenter {
@@ -47,11 +43,13 @@ h3 {
    margin-top: 0px;
    margin-right: 0px;
    margin-left: 0px;
+   margin-bottom: 0px;
  }
 
  #divIDTwo {
    margin-top: 0px;
    margin-left: 0px;
+   margin-bottom: 0px;
  }
 
 .upper-left-col {

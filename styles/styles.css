@@ -34,11 +34,11 @@ h3 {
 img {
   position: absolute;
   margin: auto;
-  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
 }
+
 #divCenter {
   margin:0px;
 }
@@ -47,13 +47,11 @@ img {
    margin-top: 0px;
    margin-right: 0px;
    margin-left: 0px;
-   margin-bottom: 0px;
  }
 
  #divIDTwo {
    margin-top: 0px;
    margin-left: 0px;
-   margin-bottom: 0px;
  }
 
 

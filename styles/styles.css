@@ -4,6 +4,7 @@ p {
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
+  vertical-align: middle;
 }
 
 ul {
@@ -11,9 +12,11 @@ ul {
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
+  vertical-align: middle;
 }
 
 h2 {
+  vertical-align: middle;
   text-align: center;
   color: #233627;
   font-weight: bolder;
@@ -22,6 +25,7 @@ h2 {
 }
 
 h3 {
+  vertical-align: middle;
   text-align: center;
   color: #233627;
   font-weight: bolder;

@@ -1,27 +1,33 @@
+main{
+  margin-left: 0px;
+  margin-top: 0px;
+}
 p {
   font-size: 14px;
-  color: #3F6146;
+  color: #3f6146;
   font-family: 'Roboto Mono', monospace;
 }
 
-.intro-paragraph {
-  font-size: 16px;
-  text-align: right;
+ul {
+  font-size: 14px;
+  color: #3f6146;
+  font-family: 'Roboto Mono', monospace;
 }
 
-.header-paragraph {
-  margin-left: 100px;
+h2 {
   text-align: center;
+  color: #233627;
+  font-weight: bolder;
+  font-size: 28px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-h1 {
-    margin-top: 150px;
-    margin-left: 100px;
-    text-align: center;
-    color: #3F6146;
-    font-weight: bolder;
-    font-size: 28px;
-    font-family: 'Josefin Sans', sans-serif;
+h3 {
+  text-align: center;
+  color: #233627;
+  font-weight: bolder;
+  font-size: 28px;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 img {
@@ -30,24 +36,67 @@ img {
     margin-left: 30px;
     margin-right: 30px;
 }
-
-.right
-
-{float: right; }
-
-.left
-
-{float: left; }
-
-.logo-img {
-  text-align: center
+#divCenter {
+  margin:0px;
 }
+
+ #divIDOne {
+   margin-top: 0px;
+   margin-right: 0px;
+   margin-left: 0px;
+ }
+
+ #divIDTwo {
+   margin-top: 0px;
+   margin-left: 0px;
+ }
 
 
 .upper-left-col {
   background-color: #5e5b59;
+  vertical-align: middle;
 }
 
-.right-col {
-  background-color: #948D85;
+.upper-middle-col{
+  background-color: #a8a39f;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.upper-right-col{
+  background-color: #d8d6d4;
+  vertical-align: middle;
+}
+
+.middle-left-col {
+background-color: #a8a39f;
+text-align: center;
+vertical-align: middle;
+}
+
+.middle-centre-col {
+  background-color: #5e5b59;
+  vertical-align: middle;
+}
+
+.middle-right-col{
+  background-color: #a8a39f;
+  vertical-align: middle;
+}
+
+.bottom-left-col{
+  background-color: #d8d6d4;
+  vertical-align: middle;
+}
+
+.bottom-middle-col {
+  background-color: #d8d6d4;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.bottom-right-col {
+  background-color: #5e5b59;
+  vertical-align: middle;
+
 }

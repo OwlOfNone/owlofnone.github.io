@@ -2,6 +2,7 @@ main{
   margin-left: 0px;
   margin-top: 0px;
 }
+
 p {
   font-size: 14px;
   color: #3f6146;
@@ -13,6 +14,7 @@ ul {
   font-size: 14px;
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
+  text-align: center;
 }
 
 h2 {
@@ -49,7 +51,6 @@ img {
    margin-top: 0px;
    margin-left: 0px;
  }
-
 
 .upper-left-col {
   background-color: #5e5b59;

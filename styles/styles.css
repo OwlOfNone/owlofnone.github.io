@@ -7,7 +7,7 @@ body {
  }
 
 p {
-  font-size: 14px;
+  font-size: 18px;
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
@@ -15,7 +15,7 @@ p {
 }
 
 ul {
-  font-size: 12px;
+  font-size: 18px;
   color: #3f6146;
   font-family: 'Roboto Mono', monospace;
   text-align: center;
@@ -27,7 +27,7 @@ h2 {
   text-align: center;
   color: #233627;
   font-weight: bolder;
-  font-size: 26px;
+  font-size: 30px;
   font-family: 'Josefin Sans', sans-serif;
 }
 
@@ -36,7 +36,7 @@ h3 {
   text-align: center;
   color: #233627;
   font-weight: bolder;
-  font-size: 24px;
+  font-size: 26px;
   font-family: 'Josefin Sans', sans-serif;
 }
 

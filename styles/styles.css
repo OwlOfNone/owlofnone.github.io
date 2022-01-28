@@ -111,3 +111,23 @@ vertical-align: middle;
   vertical-align: middle;
 
 }
+
+.first-social-media-icon {
+  margin-left: 100px;
+  margin-right: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.second-social-media-icon {
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.third-social-media-icon {
+  margin-right: 75px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

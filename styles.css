@@ -300,7 +300,7 @@ section {
 .border-img{
   display: block;
   max-width: 100%;
-  border: 2rem solid var(--clr-primary-400);
+  border: 1rem solid var(--clr-primary-400);
 }
 
 .vertical-align{
@@ -441,7 +441,7 @@ section {
   .border-img{
     display: block;
     max-width: 100%;
-    border: 5rem solid var(--clr-primary-400);
+    border: 2rem solid var(--clr-primary-400);
   }
 
   .index_div{

@@ -221,13 +221,7 @@ img {
 
 section {
   padding: 10rem 0;
-  @media (min-width: 40em) {
-    section {
-      padding: 20rem 0;
-    }
-  }
 }
-
 
 .container {
   height: 40%;
@@ -289,18 +283,13 @@ section {
 }
 
 .img_div {
-  background-color: var(--clr-neutral-900);
+  border-color: var(--clr-neutral-900);
   display: block;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   position: absolute;
   bottom: 1rem;
-}
-
-.border-img{
-  display: block;
-  max-width: 100%;
-  border: 1rem solid var(--clr-primary-400);
 }
 
 .vertical-align{
@@ -386,18 +375,11 @@ section {
   }
   
   .img-logo {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2rem;
+    height: 2rem;
     margin-left: 5%;
     margin-top: 5%;
-    display: flex;
-    @media screen and (min-width: 1312px) {
-      width: 5rem;
-      height: 5rem;
-      margin-left: 10%;
-      margin-top: 10%;
-    }
-    
+    display: flex;  
   }
 
   .flag {
@@ -460,6 +442,21 @@ section {
   .scrollable{
     max-height: 600px;
     overflow-y: scroll;
+  }
+}
+
+@media (min-width: 40em) {
+  section {
+    padding: 20rem 0;
+  }
+}
+
+@media screen and (min-width: 1312px) {
+  .img-logo{
+    width: 3rem;
+    height: 3rem;
+    margin-left: 10%;
+    margin-top: 10%;
   }
 }
 

@@ -1,184 +1,181 @@
 /* josefin-sans-200 - latin */
 @font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 200;
-  src: url('./fonts/josefin-sans-v20-latin-200.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/josefin-sans-v20-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/josefin-sans-v20-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/josefin-sans-v20-latin-200.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/josefin-sans-v20-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/josefin-sans-v20-latin-200.svg#JosefinSans') format('svg'); /* Legacy iOS */
-}
-
-/* josefin-sans-regular - latin */
-@font-face {
-  font-family: 'Josefin Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/josefin-sans-v20-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/josefin-sans-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/josefin-sans-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/josefin-sans-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/josefin-sans-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/josefin-sans-v20-latin-regular.svg#JosefinSans') format('svg'); /* Legacy iOS */
-}
-
-/* roboto-mono-regular - latin */
-@font-face {
-  font-family: 'Roboto Mono';
-  font-style: normal;
-  font-weight: 400;
-  src: url('./fonts/roboto-mono-v13-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local(''),
-       url('./fonts/roboto-mono-v13-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('./fonts/roboto-mono-v13-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('./fonts/roboto-mono-v13-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('./fonts/roboto-mono-v13-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('./fonts/roboto-mono-v13-latin-regular.svg#RobotoMono') format('svg'); /* Legacy iOS */
-}
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./fonts/josefin-sans-v20-latin-200.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/josefin-sans-v20-latin-200.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/josefin-sans-v20-latin-200.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/josefin-sans-v20-latin-200.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/josefin-sans-v20-latin-200.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/josefin-sans-v20-latin-200.svg#JosefinSans') format('svg'); /* Legacy iOS */
+  }
+  
+  /* josefin-sans-regular - latin */
+  @font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/josefin-sans-v20-latin-regular.eot'); /* IE9 Compat Modes */
+    src: local(''),
+         url('./fonts/josefin-sans-v20-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('./fonts/josefin-sans-v20-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('./fonts/josefin-sans-v20-latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('./fonts/josefin-sans-v20-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('./fonts/josefin-sans-v20-latin-regular.svg#JosefinSans') format('svg'); /* Legacy iOS */
+  }
 
 :root {
-  --clr-primary-200: #8a7f94;
-  --clr-primary-400: #45405c;
 
-  --clr-neutral-100: #CCCCCC;
-  --clr-neutral-900: #594D65;
-  --clr-neutral-1000: #333333;
-
-  --ff-primary: "Josefin Sans", Sans;
-  --ff-accent: "Roboto Mono", monospace;
+    --text-color: white;
+    --text-shadow-color: black;
+    --background-color: #49392C;
+    --button-text-color: #18558B;
+    --button-bg-color: white;
+    --article-background-color: #698d7a;
+    
+    --default-font: "Josefin Sans", Sans;
 }
 
 body {
-  color: var(--clr-neutral-1000);
-  background-color: white;
-  font-family: var(--ff-primary);
-  font-weight: 400;
-}
-
-img {
-  max-width: 100%;
+    color: var(--text-color);
+    font-family: var(--default-font);
+    font-weight: 400;
+    background-color: var(--background-color);
+    background-image: url('./img/header.png');
 }
 
 header {
+    background-color: var(--article-background-color);
+    background-image: url('./img/header.png');
+    border-radius: 2rem;
+    box-shadow: 0px .1rem .2rem black;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 0.05rem;
+    margin-bottom: .5rem;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1, h2 
+{
+    text-shadow: 1px 1px 1px var(--text-shadow-color),
+    -1px 1px 1px var(--text-shadow-color),
+    1px -1px 1px var(--text-shadow-color),
+    -1px -1px 1px var(--text-shadow-color);
+}
+
+h1 {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    font-size: 32pt;
+}
+
+a {
+  color: white;
+  font-weight: bold;
   text-align: center;
-  border-radius: 1rem;
+}
+
+ol {
+    padding-left: 1rem;
 }
 
 article {
-  padding: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+    background-color: var(--article-background-color);
+    border-radius: 2rem;
+    box-shadow: 0px .1rem .2rem black;
+    padding-top: .5rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
 }
 
 article h2 {
-	text-align: center;
-	border-bottom: .1rem solid var(--clr-neutral-900);
+    text-align: center;
+    padding-left: .2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    font-size: 24pt;
 }
 
-.main_section, .social_media_links, footer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  align-content: center;
-  justify-content: center;
+article h2 img {
+    vertical-align: text-bottom;
+    width: 1.25em;
+    height: 1.25em;
 }
 
-.home_button_logo img {
-  width: 12.5rem;
+article a {
+    color: var(--button-text-color);
 }
 
-.centered_text_section, .home_button_logo {
-  text-align: center;
+section {
+    text-align: justify;
+    padding-left: .2rem;
+    margin-bottom: .5rem;
 }
 
-.main_section div, .centered_text_section div {
-  font-size: 16pt;
+section.centered {
+    text-align: center;
 }
 
-.main_section div {
-  text-align: justify;
+section.links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    padding-left: 0rem;
 }
 
-.social_media_links {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  background-color: var(--clr-neutral-900);
-  border-radius: 1rem;
-}
-
-.social_media_links a
-{
-  color: white;
-  text-align: center;
-  flex: auto;
-  font-size: 20pt;
-  padding-top: .5rem;
-}
-
-.social_media_links a img {
-  padding-top: .5rem;
-}
-
-#text_only_link {
-  padding-top: 1em;
+section.links a {
+  background-color: var(--button-bg-color);
+  text-decoration: none;
+  border-radius: .5rem;
+  box-shadow: 0px .1rem .2rem black;
+  margin: .25rem;
+  padding: .5rem; 
 }
 
 footer {
-  border-top: .1rem solid var(--clr-neutral-900);
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  padding-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 footer a {
-  color: var(--clr-neutral-1000);
-  text-align: center;
-  flex: auto;
-  font-size: 16pt;
+  margin: .25rem;
+  padding: .5rem;
 }
 
-
 /* media query for wide screens (e.g. Tablet, Desktop screen) */
-@media (min-width: 70rem) {
+@media (min-width: 50rem) {
 
-  main {
-    margin-left: 18rem;
-    margin-right: 18rem;
-  }
+    body {
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
 
-  header {
-    margin-top: 25vh;
-    margin-bottom: 25vh;
-  }
+    section.links {
+        flex-direction: row;
+    }
 
-  .social_media_links {
-    margin-bottom: 20vh;
-  }
+    section.about_me {
+        display: flex;
+        flex-direction: row;
+    }
 
-  .home_button_logo {
-    margin-top: 4rem;
-  }
-
-  .main_section, .social_media_links, footer {
-    flex-direction: row;
-  }
-
-  .main_section img {
-    align-self: flex-start;
-    object-fit: contain;
-    max-width: 50%;
-  }
-
-  .main_section div {
-    margin-left: 2rem;
-  }
-
-  .main_section div p {
-    margin-top: 2rem;
-  }
+    section.about_me img {
+        align-self: flex-start;
+        object-fit: contain;
+        max-width: 50%;
+        margin-right: 1rem;
+      }
 
 }

@@ -34,6 +34,17 @@
 
         <article>
             <h2>
+                <img src="./img/download.png"/>
+                Kostenlose Downloads
+            </h2>
+            <section class="gallery">
+                <!-- Add downloadable images here-->
+                <img src="./downloads/januar-freebie.png" onclick="on_img_clicked(this)"> -->
+            </section>
+          </article>
+
+        <article>
+            <h2>
                 <img src="./img/social.png"/>
                 Social Media
             </h2>
@@ -96,5 +107,74 @@
         </footer>
 
     </main>
+
+    <div class="hidden" id="screen_cover" onclick="close_popup()">
+        <div id="img_popup" onclick="ignore_click_event()">
+            <p class="close_button" onclick="close_popup()">Close</p>
+            <img id="image_to_show" />
+            <div class="button_group">
+                <p id="prev_button" class="hand_cursor">Previous</p>
+                <p>
+                    <a id="dl_link" target="_blank" rel="noopener noreferrer">Download</a>
+                </p>
+                <p id="next_button" class="hand_cursor">Next</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function on_img_clicked(image) {
+            load_image(image)
+            open_popup()
+        }
+
+        function open_popup() {
+            var popup = document.getElementById("screen_cover");
+            popup.classList.remove("hidden");
+        }
+
+        function close_popup() {
+            var popup = document.getElementById("screen_cover");
+            if (!popup.classList.contains("hidden")) {
+                popup.classList.add("hidden");
+            }
+        }
+
+        function load_image(image) {
+            var img = document.getElementById("image_to_show");
+            img.setAttribute("src", image.getAttribute("src"));
+
+            var link = document.getElementById("dl_link");
+            link.setAttribute("href", image.getAttribute("src"));
+
+            var previous_button = document.getElementById("prev_button");
+            setup_navigation_button(previous_button, image.previousElementSibling)
+            var next_button = document.getElementById("next_button");
+            setup_navigation_button(next_button, image.nextElementSibling);
+        }
+
+        function setup_navigation_button(button, image) {
+            if(button) {
+                if (image) {
+                    button.classList.remove("hidden");
+                    button.onclick = function() {
+                        event.cancelBubble = true;
+                        load_image(image);
+                    };
+                }
+                else {
+                    button.onclick = function() {ignore_click_event();};
+                    if (!button.classList.contains("hidden")) {
+                        button.classList.add("hidden");
+                    }
+                }
+            }
+        }
+
+        function ignore_click_event() {
+            event.cancelBubble = true;
+        }
+    </script>
+
 </body>
 </html>

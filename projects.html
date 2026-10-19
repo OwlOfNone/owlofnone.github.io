@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Owl Of None</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+        <img src="./img/oon.png" alt="Owl of None Logo"/>
+        <h1>Owl of None</h1>
+
+        <p><a href="index.html">Home</a></p>
+        <p><a href="https://www.redbubble.com/de/people/OwlOfNone/shop">Redbubble</a></p>
+        <p><a href="commissions.html">Commissions</a></p>
+        <p><a href="https://www.tiktok.com/@owlofnone">TikTok</a></p>
+        <p><i>Projects</i></p>
+        <p><a href="about_me.html">About Me</a></p>        
+        
+
+    </header>
+
+    <main>
+        <section class="centered">
+            <a href="projekte.html" id="language">Deutsche Fassung</a>
+        </section>
+
+       <article>
+           <section class="centered">
+                <h3 id="digital">
+                     3D Modeling
+                </h3>
+                <p>In addition to traditional and digital art, I'm also interested in 3D modeling.</p>
+                <p>I mainly use <i>Blender</i> to model, animate, and render images.</p>
+                <p>Currently, I'm focusing on character design and modeling.</p>
+                <p>Here is a small selection of the 3D models I've created so far.</p>
+            </section>
+            <section class="gallery">
+                <img src="./img/renders/grass_tv.png" onclick="on_img_clicked(this)">
+                <img src="./img/renders/mushrooms.png" onclick="on_img_clicked(this)">
+                <img src="./img/renders/rae.png" onclick="on_img_clicked(this)">
+                <img src="./img/renders/trashbag.png" onclick="on_img_clicked(this)">
+            </section>
+          </article>
+
+        <article>
+           <section class="centered">
+                <h3 id="digital">
+                    Animations
+                </h3>
+                <p>
+                    To bring my creations to life, I'm currently exploring 2D and 3D animation as well.
+                </p>
+                <p>
+                    I'm focusing on mastering the fundamentals, such as the <i>Twelve Principles of Animation</i>.
+                </p>
+                <p>
+                    Here are two of my favorite animations so far.
+                </p>
+            </section>
+            <section class="gallery">
+                <img src="./img/renders/0001-0120.gif" onclick="on_img_clicked(this)">
+                <img src="./img/renders/doc_2026-10-19_11-57-30.gif" onclick="on_img_clicked(this)">
+            </section>
+        </article>
+
+        <article>
+            <section class="centered">
+                
+                <div>
+                    <h3>
+                        Desktop Apps
+                    </h3>
+                  <p>
+                    To set time limits for myself while painting, I wanted to have a timer that would always stay on top on my desktop.
+                  </p>
+                  <p>
+                    So I started working on exactly that in <i>Godot</i>. <br /><br />
+                    Right now, I'm still putting the finishing touches on it. As soon as the timer is ready, I'll post a link to it here for you.
+                  </p>
+                  <p>
+                    I see this project as the first in a series of apps that run on the desktop to provide a little extra help.
+                  </p>
+                </div>
+                <img src="./img/renders/timer.png"/>
+            </section>
+        </article>
+
+        <article>
+            <section class="centered">
+                <div>
+                    <h3>
+                        Game Development
+                    </h3>
+                  <p>
+                    Together with my partner, I spend my free time working on using the 3D models I've created and animated for our own video games.
+                  </p>
+                  <p>
+                    So far, we've mainly created various prototypes and familiarized ourselves with how the <i>Godot</i> engine works.
+                  </p>
+                  <p>
+                    Now we're refining a fun gameplay concept and focusing on game design. I'll keep you updated on this as well.
+                  </p>
+                </div>
+                <img src="./img/renders/rae_dreams.png"/>
+            </section>
+        </article>
+
+        <footer>
+            <a href="privacy_policy.html">Privacy Policy</a>
+            <a href="imprint.html">Imprint</a>
+        </footer>
+
+    </main>
+
+    <div class="hidden" id="screen_cover" onclick="close_popup()">
+        <div id="img_popup" onclick="ignore_click_event()">
+            <p class="close_button" onclick="close_popup()">Schließen</p>
+            <img id="image_to_show" />
+            <div class="button_group">
+                <p id="prev_button" class="hand_cursor">Previous</p>
+                <p id="next_button" class="hand_cursor">Next</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function on_img_clicked(image) {
+            load_image(image)
+            open_popup()
+        }
+
+        function open_popup() {
+            var popup = document.getElementById("screen_cover");
+            popup.classList.remove("hidden");
+        }
+
+        function close_popup() {
+            var popup = document.getElementById("screen_cover");
+            if (!popup.classList.contains("hidden")) {
+                popup.classList.add("hidden");
+            }
+        }
+
+        function load_image(image) {
+            var img = document.getElementById("image_to_show");
+            img.setAttribute("src", image.getAttribute("src"));
+
+            var previous_button = document.getElementById("prev_button");
+            setup_navigation_button(previous_button, image.previousElementSibling)
+            var next_button = document.getElementById("next_button");
+            setup_navigation_button(next_button, image.nextElementSibling);
+        }
+
+        function setup_navigation_button(button, image) {
+            if(button) {
+                if (image) {
+                    button.classList.remove("hidden");
+                    button.onclick = function() {
+                        event.cancelBubble = true;
+                        load_image(image);
+                    };
+                }
+                else {
+                    button.onclick = function() {ignore_click_event();};
+                    if (!button.classList.contains("hidden")) {
+                        button.classList.add("hidden");
+                    }
+                }
+            }
+        }
+
+        function ignore_click_event() {
+            event.cancelBubble = true;
+        }
+    </script>
+
+</body>
+</html>

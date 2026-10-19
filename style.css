@@ -28,12 +28,11 @@
 
 :root {
 
-    --text-color: white;
-    --text-shadow-color: black;
-    --background-color: #49392C;
-    --button-text-color: #18558B;
+    --text-color:#cc6699; 
+    --background-color: #faf5f5;
+    --button-text-color: #cc6699;
     --button-bg-color: white;
-    --article-background-color: #698d7a;
+    --article-background-color: #faf5f5;
     
     --default-font: "Josefin Sans", Sans;
 }
@@ -43,18 +42,22 @@ body {
     font-family: var(--default-font);
     font-weight: 400;
     background-color: var(--background-color);
-    background-image: url('./img/header.png');
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     background-color: var(--article-background-color);
-    background-image: url('./img/header.png');
-    border-radius: 2rem;
-    box-shadow: 0px .1rem .2rem black;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 0.05rem;
-    margin-bottom: .5rem;
+}
+
+header h1 {
+    text-wrap: nowrap;
+}
+
+header p.gallery_link {
+    display: none;
 }
 
 img {
@@ -76,9 +79,13 @@ h1 {
 }
 
 a {
-  color: white;
+  color: var(--text-color);
   font-weight: bold;
-  text-align: center;
+  text-align: center;  
+}
+
+a#language {
+    font-size: 10pt;
 }
 
 ol {
@@ -87,8 +94,7 @@ ol {
 
 article {
     background-color: var(--article-background-color);
-    border-radius: 2rem;
-    box-shadow: 0px .1rem .2rem black;
+
     padding-top: .5rem;
     padding-left: .5rem;
     padding-right: .5rem;
@@ -152,17 +158,28 @@ section.gallery {
 }
 
 section.gallery img {
-    border: .15rem solid white;
-    border-radius: .2rem;
     margin: .25rem;
     padding: .2rem;
 
-    width: 10rem;
+    width: 20rem;
     object-fit: contain;
+
+    transition: opacity 0.5s ease;
+    opacity: 1.
 }
 
 section.gallery img:hover {
-    background-color: white;
+    opacity: .4
+}
+
+section.about_me {
+    display: flex;
+    flex-direction: column;
+}
+
+section.about_me img {
+    align-self: center;
+    object-fit: contain;
 }
 
 footer {
@@ -213,7 +230,6 @@ div#img_popup {
     border-radius: 1rem;
     color: var(--button-text-color);
     background-color: var(--button-bg-color);
-    background-image: url('./img/header.png');
 
     text-align: center;
 }
@@ -265,8 +281,19 @@ div#img_popup a
 @media (min-width: 50rem) {
 
     body {
-        margin-left: 20vw;
-        margin-right: 20vw;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    header {
+        position: sticky;
+        top: 1rem;
+        margin-left: 1rem;
+    }
+
+    header p.gallery_link {
+        display: inherit;
     }
 
     section.links {
@@ -276,6 +303,7 @@ div#img_popup a
     section.about_me {
         display: flex;
         flex-direction: row;
+        max-width: 75%;
     }
 
     section.about_me img {
@@ -283,6 +311,7 @@ div#img_popup a
         object-fit: contain;
         max-width: 50%;
         margin-right: 1rem;
+        margin-left: 1rem;
       }
 
 }
